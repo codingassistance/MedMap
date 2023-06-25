@@ -15,7 +15,7 @@
 </head>
 
 <body
-    style="background-image:url(https://static.vecteezy.com/system/resources/previews/013/209/343/original/abstract-futuristic-medical-wallpaper-medical-icons-geometric-hexagon-vector.jpg);">
+    style="background-color: rgb(184, 231, 244);">
     <div class="container">
         <div class="col">
 
@@ -268,25 +268,19 @@
         }
 
         function bookAppointment(hospitalName) {
-            var bookingForm = document.createElement('form');
-            bookingForm.setAttribute('action', 'https://example.com/book-appointment');
-            bookingForm.setAttribute('method', 'POST');
+  var bookingForm = document.createElement('form');
+  bookingForm.setAttribute('action', '/book?hospital=' + encodeURIComponent(hospitalName));
+  bookingForm.setAttribute('method', 'GET');
 
-            var hospitalNameInput = document.createElement('input');
-            hospitalNameInput.setAttribute('type', 'hidden');
-            hospitalNameInput.setAttribute('name', 'hospital');
-            hospitalNameInput.setAttribute('value', hospitalName);
+  var submitButton = document.createElement('input');
+  submitButton.setAttribute('type', 'submit');
+  submitButton.setAttribute('value', 'Submit');
 
-            var submitButton = document.createElement('input');
-            submitButton.setAttribute('type', 'submit');
-            submitButton.setAttribute('value', 'Submit');
+  bookingForm.appendChild(submitButton);
 
-            bookingForm.appendChild(hospitalNameInput);
-            bookingForm.appendChild(submitButton);
-
-            document.body.appendChild(bookingForm);
-            bookingForm.submit();
-        }
+  document.body.appendChild(bookingForm);
+  bookingForm.submit();
+}
     </script>
 </body>
 

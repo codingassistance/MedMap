@@ -1,0 +1,147 @@
+body {
+    background-color: rgba(52, 203, 14, 0.247);
+    background-size: cover;
+}
+.col-md-12 {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-radius: 300px;
+}
+
+
+
+#locationForm {
+    border-radius: 330px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    background-color: rgba(42, 105, 26, 0);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    border: 0;
+    padding: 20px;
+    
+}
+
+#map {
+    justify-content: center;
+    height: 500px;
+    width: 100%;
+}
+
+.card-body {
+    padding-bottom: 1rem;
+    /* Add padding to the bottom of the card body */
+}
+
+.bookingButton {
+    margin-top: 10px;
+    /* Add margin to the top of the booking button */
+}
+
+/* ////////////////////////////////////////////////////// */
+/* reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.effect {
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 0vh;
+    padding: 0px;
+    font-size: 1px;
+    font-family: -apple-system, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.smaller-font {
+    font-size: 2px;
+    font-size: calc(2px + 2vw);
+    text-align: center;
+}
+
+/* other */
+.info {
+    margin: 0;
+    text-align: center;
+}
+
+.p {
+    color: #2e2e2e;
+    margin-bottom: 0;
+    font-size: 1px;
+}
+
+
+/* block-$ */
+.block-effect {
+    font-size: calc(1px + 3vw);
+}
+
+.block-reveal {
+    --t: calc(var(--td) + var(--d));
+
+    color: transparent;
+    padding: 4px;
+
+    position: relative;
+    overflow: hidden;
+
+    animation: revealBlock 0s var(--t) forwards;
+}
+
+.block-reveal::after {
+    content: '';
+
+    width: 0%;
+    height: 100%;
+    padding-bottom: 4px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: var(--bc);
+    animation: revealingIn var(--td) var(--d) forwards, revealingOut var(--td) var(--t) forwards;
+}
+
+
+/* animations */
+@keyframes revealBlock {
+    100% {
+        color: #0f0f0f;
+    }
+}
+
+@keyframes revealingIn {
+
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes revealingOut {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+
+}

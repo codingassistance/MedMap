@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/flc.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid" style="font-size:xx-large;">
+          <img src="images/logo.png" alt="" width="70" height="45" class="d-inline-block align-text-top"> MedMap 
+        
+      </div>
+    </nav>
+  </header>
+ <div class="new">
+  <div class="container">
+    <div class="title">Registration Form</div>
+    <div class="content">
+      <form method="get" action="/home"> 
+        <div class="user-details">
+          <div class="input-box">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" required>
+          </div>
+          <div class="input-box">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+          </div>
+          <div class="input-box">
+            <label for="first_name">First name</label>
+            <input type="text" name="first_name" id="first_name" required>
+          </div>
+          <div class="input-box">
+            <label for="last_name">Last name</label>
+            <input type="text" name="last_name" id="last_name" required>
+          </div>
+          <div class="input-box">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required>
+          </div>
+          <div class="input-box">
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" name="confirm_password" id="confirm_password" required>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+        <p class="register-link">Already have an account? <a href="/login">Login</a></p>
+      </form>
+    </div>
+  </div>
+  </div>
+</body>
+</html>
